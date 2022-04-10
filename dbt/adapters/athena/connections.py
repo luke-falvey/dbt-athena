@@ -185,7 +185,7 @@ class AthenaConnectionManager(SQLConnectionManager):
         )
 
     def cancel(self, connection: Connection):
-        connection.handle.cancel()
+        connection.handle.close()
 
     def add_begin_query(self):
         pass
